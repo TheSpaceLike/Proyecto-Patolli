@@ -61,6 +61,7 @@ public class Tablero extends javax.swing.JFrame {
         btnSalir = new javax.swing.JPanel();
         txtSalir = new javax.swing.JLabel();
         jPanel10 = new javax.swing.JPanel();
+        tableroFondo = new javax.swing.JLabel();
         apostar25 = new javax.swing.JPanel();
         jLabel16 = new javax.swing.JLabel();
         apostar5 = new javax.swing.JPanel();
@@ -417,15 +418,20 @@ public class Tablero extends javax.swing.JFrame {
 
         jPanel10.setBackground(new java.awt.Color(255, 255, 255));
 
+        tableroFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/ImgTableroFondo.PNG"))); // NOI18N
+
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
         jPanel10Layout.setHorizontalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1400, Short.MAX_VALUE)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addGap(220, 220, 220)
+                .addComponent(tableroFondo, javax.swing.GroupLayout.DEFAULT_SIZE, 1065, Short.MAX_VALUE)
+                .addGap(115, 115, 115))
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1120, Short.MAX_VALUE)
+            .addComponent(tableroFondo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1120, Short.MAX_VALUE)
         );
 
         getContentPane().add(jPanel10);
@@ -759,6 +765,7 @@ public class Tablero extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
+    private javax.swing.JLabel tableroFondo;
     private javax.swing.JLabel txtSalir;
     // End of variables declaration//GEN-END:variables
 }
