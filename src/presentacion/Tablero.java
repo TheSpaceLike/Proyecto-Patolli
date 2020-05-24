@@ -7,12 +7,15 @@ package presentacion;
 
 import javax.swing.JOptionPane;
 import global.Global;
+import patollimaster.Dado;
 
 /**
  *
  * @author Alan Acatictla M.
  */
 public class Tablero extends javax.swing.JFrame {
+
+    Dado dado = new Dado();
 
     /**
      * Creates new form Tablero
@@ -58,11 +61,25 @@ public class Tablero extends javax.swing.JFrame {
         btnSalir = new javax.swing.JPanel();
         txtSalir = new javax.swing.JLabel();
         jPanel10 = new javax.swing.JPanel();
+        apostar25 = new javax.swing.JPanel();
+        jLabel16 = new javax.swing.JLabel();
+        apostar5 = new javax.swing.JPanel();
+        jLabel15 = new javax.swing.JLabel();
+        apostar10 = new javax.swing.JPanel();
+        jLabel17 = new javax.swing.JLabel();
+        apostar50 = new javax.swing.JPanel();
+        jLabel18 = new javax.swing.JLabel();
+        apostar100 = new javax.swing.JPanel();
+        jLabel19 = new javax.swing.JLabel();
+        btnPasar = new javax.swing.JPanel();
+        jLabel13 = new javax.swing.JLabel();
+        btnTirarDados = new javax.swing.JPanel();
+        jLabel14 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(1900, 1350));
-        setMinimumSize(new java.awt.Dimension(1900, 1350));
-        setPreferredSize(new java.awt.Dimension(1900, 1350));
+        setMaximumSize(new java.awt.Dimension(2000, 1400));
+        setMinimumSize(new java.awt.Dimension(2000, 1400));
+        setPreferredSize(new java.awt.Dimension(2000, 1400));
         getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(153, 153, 153));
@@ -357,7 +374,7 @@ public class Tablero extends javax.swing.JFrame {
             btnSalirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(btnSalirLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txtSalir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(txtSalir, javax.swing.GroupLayout.DEFAULT_SIZE, 62, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -391,12 +408,12 @@ public class Tablero extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(53, 53, 53)
-                .addComponent(btnSalir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(70, 70, 70))
+                .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(176, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 610, 1330);
+        jPanel1.setBounds(0, 0, 610, 1440);
 
         jPanel10.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -404,15 +421,232 @@ public class Tablero extends javax.swing.JFrame {
         jPanel10.setLayout(jPanel10Layout);
         jPanel10Layout.setHorizontalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1270, Short.MAX_VALUE)
+            .addGap(0, 1400, Short.MAX_VALUE)
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1330, Short.MAX_VALUE)
+            .addGap(0, 1120, Short.MAX_VALUE)
         );
 
         getContentPane().add(jPanel10);
-        jPanel10.setBounds(610, 0, 1270, 1330);
+        jPanel10.setBounds(610, 0, 1400, 1120);
+
+        apostar25.setBackground(new java.awt.Color(247, 226, 72));
+
+        jLabel16.setFont(new java.awt.Font("Tahoma", 0, 28)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel16.setText("25");
+
+        javax.swing.GroupLayout apostar25Layout = new javax.swing.GroupLayout(apostar25);
+        apostar25.setLayout(apostar25Layout);
+        apostar25Layout.setHorizontalGroup(
+            apostar25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 260, Short.MAX_VALUE)
+            .addGroup(apostar25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(apostar25Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel16)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        apostar25Layout.setVerticalGroup(
+            apostar25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 70, Short.MAX_VALUE)
+            .addGroup(apostar25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(apostar25Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel16)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        getContentPane().add(apostar25);
+        apostar25.setBounds(1050, 1240, 260, 70);
+
+        apostar5.setBackground(new java.awt.Color(133, 214, 56));
+        apostar5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                apostar5MouseClicked(evt);
+            }
+        });
+
+        jLabel15.setFont(new java.awt.Font("Tahoma", 0, 28)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel15.setText("5");
+
+        javax.swing.GroupLayout apostar5Layout = new javax.swing.GroupLayout(apostar5);
+        apostar5.setLayout(apostar5Layout);
+        apostar5Layout.setHorizontalGroup(
+            apostar5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 260, Short.MAX_VALUE)
+            .addGroup(apostar5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(apostar5Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel15)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        apostar5Layout.setVerticalGroup(
+            apostar5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 70, Short.MAX_VALUE)
+            .addGroup(apostar5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(apostar5Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel15)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        getContentPane().add(apostar5);
+        apostar5.setBounds(1050, 1150, 260, 70);
+
+        apostar10.setBackground(new java.awt.Color(175, 221, 42));
+
+        jLabel17.setFont(new java.awt.Font("Tahoma", 0, 28)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel17.setText("10");
+
+        javax.swing.GroupLayout apostar10Layout = new javax.swing.GroupLayout(apostar10);
+        apostar10.setLayout(apostar10Layout);
+        apostar10Layout.setHorizontalGroup(
+            apostar10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 260, Short.MAX_VALUE)
+            .addGroup(apostar10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(apostar10Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel17)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        apostar10Layout.setVerticalGroup(
+            apostar10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 70, Short.MAX_VALUE)
+            .addGroup(apostar10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(apostar10Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel17)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        getContentPane().add(apostar10);
+        apostar10.setBounds(1680, 1150, 260, 70);
+
+        apostar50.setBackground(new java.awt.Color(244, 160, 8));
+
+        jLabel18.setFont(new java.awt.Font("Tahoma", 0, 28)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel18.setText("50");
+
+        javax.swing.GroupLayout apostar50Layout = new javax.swing.GroupLayout(apostar50);
+        apostar50.setLayout(apostar50Layout);
+        apostar50Layout.setHorizontalGroup(
+            apostar50Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 260, Short.MAX_VALUE)
+            .addGroup(apostar50Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(apostar50Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel18)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        apostar50Layout.setVerticalGroup(
+            apostar50Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 70, Short.MAX_VALUE)
+            .addGroup(apostar50Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(apostar50Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel18)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        getContentPane().add(apostar50);
+        apostar50.setBounds(1680, 1240, 260, 70);
+
+        apostar100.setBackground(new java.awt.Color(255, 102, 102));
+
+        jLabel19.setFont(new java.awt.Font("Tahoma", 0, 28)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel19.setText("100");
+
+        javax.swing.GroupLayout apostar100Layout = new javax.swing.GroupLayout(apostar100);
+        apostar100.setLayout(apostar100Layout);
+        apostar100Layout.setHorizontalGroup(
+            apostar100Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 290, Short.MAX_VALUE)
+            .addGroup(apostar100Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(apostar100Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel19)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        apostar100Layout.setVerticalGroup(
+            apostar100Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 70, Short.MAX_VALUE)
+            .addGroup(apostar100Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(apostar100Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel19)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        getContentPane().add(apostar100);
+        apostar100.setBounds(1350, 1200, 290, 70);
+
+        btnPasar.setBackground(new java.awt.Color(142, 142, 142));
+        btnPasar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnPasarMouseClicked(evt);
+            }
+        });
+
+        jLabel13.setFont(new java.awt.Font("Tahoma", 0, 28)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel13.setText("PASAR");
+
+        javax.swing.GroupLayout btnPasarLayout = new javax.swing.GroupLayout(btnPasar);
+        btnPasar.setLayout(btnPasarLayout);
+        btnPasarLayout.setHorizontalGroup(
+            btnPasarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnPasarLayout.createSequentialGroup()
+                .addGap(111, 111, 111)
+                .addComponent(jLabel13)
+                .addContainerGap(117, Short.MAX_VALUE))
+        );
+        btnPasarLayout.setVerticalGroup(
+            btnPasarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnPasarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(btnPasar);
+        btnPasar.setBounds(650, 1240, 310, 80);
+
+        btnTirarDados.setBackground(new java.awt.Color(13, 134, 201));
+        btnTirarDados.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnTirarDadosMouseClicked(evt);
+            }
+        });
+
+        jLabel14.setFont(new java.awt.Font("Tahoma", 0, 28)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel14.setText("TIRAR DADOS");
+
+        javax.swing.GroupLayout btnTirarDadosLayout = new javax.swing.GroupLayout(btnTirarDados);
+        btnTirarDados.setLayout(btnTirarDadosLayout);
+        btnTirarDadosLayout.setHorizontalGroup(
+            btnTirarDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnTirarDadosLayout.createSequentialGroup()
+                .addContainerGap(75, Short.MAX_VALUE)
+                .addComponent(jLabel14)
+                .addGap(58, 58, 58))
+        );
+        btnTirarDadosLayout.setVerticalGroup(
+            btnTirarDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnTirarDadosLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(btnTirarDados);
+        btnTirarDados.setBounds(650, 1140, 310, 80);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -432,6 +666,21 @@ public class Tablero extends javax.swing.JFrame {
 
         this.dispose();
     }//GEN-LAST:event_btnSalirMouseClicked
+
+    private void btnTirarDadosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnTirarDadosMouseClicked
+        // TODO add your handling code here:
+
+        dado.tirarDado();
+    }//GEN-LAST:event_btnTirarDadosMouseClicked
+
+    private void btnPasarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnPasarMouseClicked
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_btnPasarMouseClicked
+
+    private void apostar5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_apostar5MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_apostar5MouseClicked
 
     /**
      * @param args the command line arguments
@@ -473,11 +722,25 @@ public class Tablero extends javax.swing.JFrame {
     private javax.swing.JLabel Avatar2;
     private javax.swing.JLabel Avatar3;
     private javax.swing.JLabel Avatar4;
+    private javax.swing.JPanel apostar10;
+    private javax.swing.JPanel apostar100;
+    private javax.swing.JPanel apostar25;
+    private javax.swing.JPanel apostar5;
+    private javax.swing.JPanel apostar50;
+    private javax.swing.JPanel btnPasar;
     private javax.swing.JPanel btnSalir;
+    private javax.swing.JPanel btnTirarDados;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

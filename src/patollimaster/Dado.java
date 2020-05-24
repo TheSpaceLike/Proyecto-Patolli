@@ -23,7 +23,7 @@ public class Dado {
     private static Dado _instanciaDado = null;
     Random random;
     
-        private Dado(){
+        public Dado(){
             random = new Random();
             random.setSeed(new Date().getTime());
         }

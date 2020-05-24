@@ -23,30 +23,30 @@ public class SalaEspera extends javax.swing.JFrame {
         this.panelPlayer2.setVisible(false);
         this.panelPlayer3.setVisible(false);
         this.panelPlayer4.setVisible(false);
-        
-        switch(Global.jugadores.size()) {
+
+        switch (Global.jugadores.size()) {
             case 4:
                 this.panelPlayer4.setVisible(true);
                 this.labelPlayer4.setText(Global.jugadores.get(3).getNombre());
-                this.Avatar4.setIcon(new ImageIcon(this.getClass().getResource("/Imagenes/"+Global.jugadores.get(3).getRutaAvatar())));
+                this.Avatar4.setIcon(new ImageIcon(this.getClass().getResource("/Imagenes/" + Global.jugadores.get(3).getRutaAvatar())));
             case 3:
                 this.panelPlayer3.setVisible(true);
                 this.labelPlayer3.setText(Global.jugadores.get(2).getNombre());
-                this.Avatar3.setIcon(new ImageIcon(this.getClass().getResource("/Imagenes/"+Global.jugadores.get(2).getRutaAvatar())));
+                this.Avatar3.setIcon(new ImageIcon(this.getClass().getResource("/Imagenes/" + Global.jugadores.get(2).getRutaAvatar())));
             case 2:
                 this.panelPlayer2.setVisible(true);
                 this.labelPlayer2.setText(Global.jugadores.get(1).getNombre());
-                this.Avatar2.setIcon(new ImageIcon(this.getClass().getResource("/Imagenes/"+Global.jugadores.get(1).getRutaAvatar())));
+                this.Avatar2.setIcon(new ImageIcon(this.getClass().getResource("/Imagenes/" + Global.jugadores.get(1).getRutaAvatar())));
             case 1:
                 System.out.println("1");
                 this.panelPlayer1.setVisible(true);
                 this.labelPlayer1.setText(Global.jugadores.get(0).getNombre());
-                this.Avatar1.setIcon(new ImageIcon(this.getClass().getResource("/Imagenes/"+Global.jugadores.get(0).getRutaAvatar())));
+                this.Avatar1.setIcon(new ImageIcon(this.getClass().getResource("/Imagenes/" + Global.jugadores.get(0).getRutaAvatar())));
                 break;
-               
+
         }
     }
-    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -367,7 +367,7 @@ public class SalaEspera extends javax.swing.JFrame {
 
     private void btnVotarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVotarMouseClicked
         // TODO add your handling code here:
-        
+
     }//GEN-LAST:event_btnVotarMouseClicked
 
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
