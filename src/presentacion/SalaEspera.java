@@ -72,6 +72,8 @@ public class SalaEspera extends javax.swing.JFrame {
         Avatar4 = new javax.swing.JLabel();
         labelPlayer4 = new javax.swing.JLabel();
         btnAdd = new javax.swing.JButton();
+        btnRegresar1 = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
         btnVotar = new javax.swing.JPanel();
         txtVotar = new javax.swing.JLabel();
         btnRegresar = new javax.swing.JPanel();
@@ -119,6 +121,7 @@ public class SalaEspera extends javax.swing.JFrame {
             }
         });
 
+        labelPlayer1.setFont(new java.awt.Font("Tahoma", 0, 30)); // NOI18N
         labelPlayer1.setText("Jugador 1");
 
         javax.swing.GroupLayout panelPlayer1Layout = new javax.swing.GroupLayout(panelPlayer1);
@@ -128,18 +131,21 @@ public class SalaEspera extends javax.swing.JFrame {
             .addGroup(panelPlayer1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(Avatar1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(labelPlayer1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelPlayer1Layout.setVerticalGroup(
             panelPlayer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelPlayer1Layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(panelPlayer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Avatar1)
-                    .addComponent(labelPlayer1))
-                .addContainerGap(74, Short.MAX_VALUE))
+                    .addGroup(panelPlayer1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(Avatar1))
+                    .addGroup(panelPlayer1Layout.createSequentialGroup()
+                        .addGap(88, 88, 88)
+                        .addComponent(labelPlayer1)))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
 
         Avatar2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/avatar2.PNG"))); // NOI18N
@@ -149,6 +155,7 @@ public class SalaEspera extends javax.swing.JFrame {
             }
         });
 
+        labelPlayer2.setFont(new java.awt.Font("Tahoma", 0, 30)); // NOI18N
         labelPlayer2.setText("Jugador 2");
 
         javax.swing.GroupLayout panelPlayer2Layout = new javax.swing.GroupLayout(panelPlayer2);
@@ -167,9 +174,11 @@ public class SalaEspera extends javax.swing.JFrame {
             .addGroup(panelPlayer2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(panelPlayer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelPlayer2)
-                    .addComponent(Avatar2))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(Avatar2)
+                    .addGroup(panelPlayer2Layout.createSequentialGroup()
+                        .addGap(71, 71, 71)
+                        .addComponent(labelPlayer2)))
+                .addContainerGap(33, Short.MAX_VALUE))
         );
 
         Avatar3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/avatar3.PNG"))); // NOI18N
@@ -179,6 +188,7 @@ public class SalaEspera extends javax.swing.JFrame {
             }
         });
 
+        labelPlayer3.setFont(new java.awt.Font("Tahoma", 0, 30)); // NOI18N
         labelPlayer3.setText("Jugador 3");
 
         javax.swing.GroupLayout panelPlayer3Layout = new javax.swing.GroupLayout(panelPlayer3);
@@ -197,13 +207,16 @@ public class SalaEspera extends javax.swing.JFrame {
             .addGroup(panelPlayer3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(panelPlayer3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelPlayer3)
-                    .addComponent(Avatar3, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(Avatar3, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(panelPlayer3Layout.createSequentialGroup()
+                        .addGap(69, 69, 69)
+                        .addComponent(labelPlayer3)))
+                .addContainerGap(36, Short.MAX_VALUE))
         );
 
         Avatar4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/avatar4.PNG"))); // NOI18N
 
+        labelPlayer4.setFont(new java.awt.Font("Tahoma", 0, 30)); // NOI18N
         labelPlayer4.setText("jugador 4");
 
         javax.swing.GroupLayout panelPlayer4Layout = new javax.swing.GroupLayout(panelPlayer4);
@@ -215,18 +228,21 @@ public class SalaEspera extends javax.swing.JFrame {
                 .addComponent(Avatar4)
                 .addGap(18, 18, 18)
                 .addComponent(labelPlayer4)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(190, Short.MAX_VALUE))
         );
         panelPlayer4Layout.setVerticalGroup(
             panelPlayer4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelPlayer4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(panelPlayer4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelPlayer4)
-                    .addComponent(Avatar4))
+                    .addComponent(Avatar4)
+                    .addGroup(panelPlayer4Layout.createSequentialGroup()
+                        .addGap(71, 71, 71)
+                        .addComponent(labelPlayer4)))
                 .addContainerGap(27, Short.MAX_VALUE))
         );
 
+        btnAdd.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         btnAdd.setText("Agregar otro jugador");
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -234,44 +250,39 @@ public class SalaEspera extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(171, 171, 171)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(panelPlayer1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(panelPlayer3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(panelPlayer2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(panelPlayer4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(179, 179, 179)
-                        .addComponent(btnAdd)))
-                .addContainerGap(631, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(panelPlayer1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(panelPlayer2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(panelPlayer4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(panelPlayer3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addComponent(btnAdd)
-                .addContainerGap(467, Short.MAX_VALUE))
-        );
+        btnRegresar1.setBackground(new java.awt.Color(212, 90, 90));
+        btnRegresar1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnRegresar1MouseClicked(evt);
+            }
+        });
 
-        getContentPane().add(jPanel2);
-        jPanel2.setBounds(-90, 180, 1820, 1100);
+        jLabel9.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 32)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("REGRESAR");
+        jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel9MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout btnRegresar1Layout = new javax.swing.GroupLayout(btnRegresar1);
+        btnRegresar1.setLayout(btnRegresar1Layout);
+        btnRegresar1Layout.setHorizontalGroup(
+            btnRegresar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnRegresar1Layout.createSequentialGroup()
+                .addContainerGap(139, Short.MAX_VALUE)
+                .addComponent(jLabel9)
+                .addGap(118, 118, 118))
+        );
+        btnRegresar1Layout.setVerticalGroup(
+            btnRegresar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnRegresar1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, 56, Short.MAX_VALUE)
+                .addContainerGap())
+        );
 
         btnVotar.setBackground(new java.awt.Color(96, 162, 202));
         btnVotar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -288,10 +299,10 @@ public class SalaEspera extends javax.swing.JFrame {
         btnVotar.setLayout(btnVotarLayout);
         btnVotarLayout.setHorizontalGroup(
             btnVotarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(btnVotarLayout.createSequentialGroup()
-                .addGap(151, 151, 151)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnVotarLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(txtVotar)
-                .addContainerGap(166, Short.MAX_VALUE))
+                .addGap(158, 158, 158))
         );
         btnVotarLayout.setVerticalGroup(
             btnVotarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -301,8 +312,51 @@ public class SalaEspera extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        getContentPane().add(btnVotar);
-        btnVotar.setBounds(700, 850, 411, 90);
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(171, 171, 171)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(panelPlayer1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(panelPlayer3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(panelPlayer4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(panelPlayer2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(181, 181, 181))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGap(142, 142, 142)
+                .addComponent(btnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 398, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 254, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnVotar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnRegresar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(705, 705, 705))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(panelPlayer2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(panelPlayer1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(104, 104, 104)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(panelPlayer3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(panelPlayer4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(89, 89, 89)
+                .addComponent(btnVotar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnRegresar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(188, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(jPanel2);
+        jPanel2.setBounds(-90, 150, 1910, 1130);
 
         btnRegresar.setBackground(new java.awt.Color(212, 90, 90));
         btnRegresar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -375,6 +429,17 @@ public class SalaEspera extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_btnAddActionPerformed
 
+    private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
+        // TODO add your handling code here:
+        this.dispose();
+    }//GEN-LAST:event_jLabel9MouseClicked
+
+    private void btnRegresar1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRegresar1MouseClicked
+        // TODO add your handling code here:
+
+        this.dispose();
+    }//GEN-LAST:event_btnRegresar1MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -417,9 +482,11 @@ public class SalaEspera extends javax.swing.JFrame {
     private javax.swing.JLabel Avatar4;
     private javax.swing.JButton btnAdd;
     private javax.swing.JPanel btnRegresar;
+    private javax.swing.JPanel btnRegresar1;
     private javax.swing.JPanel btnVotar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel labelPlayer1;
