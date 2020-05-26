@@ -3,9 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/D:/Semestre%208/Arquitectura/Proyecto-Patolli-master/src/patollimaster/Dado.java</file>
+            <file>file:/D:/Semestre%208/Arquitectura/Proyecto-Patolli-master/src/patollimaster/Tablero.java</file>
+            <file>file:/D:/Semestre%208/Arquitectura/Proyecto-Patolli-master/src/patollimaster/Jugador.java</file>
+            <file>file:/D:/Semestre%208/Arquitectura/Proyecto-Patolli-master/src/patollimaster/Iterador.java</file>
+            <file>file:/D:/Semestre%208/Arquitectura/Proyecto-Patolli-master/src/Dominio/Preferencia.java</file>
+            <file>file:/D:/Semestre%208/Arquitectura/Proyecto-Patolli-master/src/patollimaster/Vista.java</file>
             <file>file:/D:/Semestre%208/Arquitectura/Proyecto-Patolli-master/src/presentacion/Tablero.java</file>
+            <file>file:/D:/Semestre%208/Arquitectura/Proyecto-Patolli-master/src/patollimaster/Casilla.java</file>
             <file>file:/D:/Semestre%208/Arquitectura/Proyecto-Patolli-master/src/patollimaster/Patolli.java</file>
-            <file>file:/D:/Semestre%208/Arquitectura/Proyecto-Patolli-master/src/patollimaster/JugadorIA.java</file>
+            <file>file:/D:/Semestre%208/Arquitectura/Proyecto-Patolli-master/src/presentacion/SalaEspera.java</file>
         </group>
     </open-files>
 </project-private>

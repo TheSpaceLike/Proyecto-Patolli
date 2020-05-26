@@ -421,6 +421,9 @@ public class SalaEspera extends javax.swing.JFrame {
 
     private void btnVotarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVotarMouseClicked
         // TODO add your handling code here:
+        Tablero tablero = new Tablero();
+        tablero.setVisible(true);
+        tablero.setAlwaysOnTop(false);
 
     }//GEN-LAST:event_btnVotarMouseClicked
 
