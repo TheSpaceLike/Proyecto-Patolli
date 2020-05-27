@@ -14,7 +14,7 @@ import java.util.ArrayList;
  */
 public class Global {
 
-    public static int numJugadores = 2;
+    public static int numJugadores = 0;
 
     public static ArrayList<Jugador> jugadores = new ArrayList<Jugador>();
 

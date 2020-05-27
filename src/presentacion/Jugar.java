@@ -373,7 +373,7 @@ public class Jugar extends javax.swing.JFrame {
                 this.setVisible(false);
                 this.dispose();
             } else {
-                JOptionPane.showMessageDialog(this, "Solo se pueden registrar cuatro jugadores.", "Registro de jugador", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Ya no se pueden registrar más jugadores", "Registro de jugador", JOptionPane.INFORMATION_MESSAGE);
             }
         }
 //

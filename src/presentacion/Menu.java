@@ -35,7 +35,7 @@ public class Menu extends javax.swing.JFrame {
         } else {
             this.jugador = jugador;
         }
-        */
+         */
     }
 
     /**
@@ -51,10 +51,6 @@ public class Menu extends javax.swing.JFrame {
         }
         instance.setJugador(jugador);
         return instance;
-    }
-
-    Menu() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     /**
@@ -90,8 +86,6 @@ public class Menu extends javax.swing.JFrame {
         txtTitulo = new javax.swing.JLabel();
         btnJugar = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        btnConfiguraciones = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
         btnSalir = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         btnComoJugar = new javax.swing.JPanel();
@@ -136,30 +130,7 @@ public class Menu extends javax.swing.JFrame {
             btnJugarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnJugarLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
-        btnConfiguraciones.setBackground(new java.awt.Color(96, 162, 202));
-
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 30)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("CONFIGURACIONES");
-
-        javax.swing.GroupLayout btnConfiguracionesLayout = new javax.swing.GroupLayout(btnConfiguraciones);
-        btnConfiguraciones.setLayout(btnConfiguracionesLayout);
-        btnConfiguracionesLayout.setHorizontalGroup(
-            btnConfiguracionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnConfiguracionesLayout.createSequentialGroup()
-                .addContainerGap(79, Short.MAX_VALUE)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(52, 52, 52))
-        );
-        btnConfiguracionesLayout.setVerticalGroup(
-            btnConfiguracionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnConfiguracionesLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 68, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -187,7 +158,7 @@ public class Menu extends javax.swing.JFrame {
             btnSalirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnSalirLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)
+                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 68, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -207,7 +178,7 @@ public class Menu extends javax.swing.JFrame {
         btnComoJugarLayout.setHorizontalGroup(
             btnComoJugarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnComoJugarLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(115, Short.MAX_VALUE)
                 .addComponent(jLabel4)
                 .addGap(114, 114, 114))
         );
@@ -215,7 +186,7 @@ public class Menu extends javax.swing.JFrame {
             btnComoJugarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnComoJugarLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)
+                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 68, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -232,8 +203,7 @@ public class Menu extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnJugar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnComoJugar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnSalir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnConfiguraciones, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnSalir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -243,13 +213,11 @@ public class Menu extends javax.swing.JFrame {
                 .addComponent(txtTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(164, 164, 164)
                 .addComponent(btnJugar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(53, 53, 53)
-                .addComponent(btnConfiguraciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(57, 57, 57)
+                .addGap(61, 61, 61)
                 .addComponent(btnComoJugar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(52, 52, 52)
+                .addGap(57, 57, 57)
                 .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(241, Short.MAX_VALUE))
+                .addContainerGap(345, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel1);
@@ -260,14 +228,13 @@ public class Menu extends javax.swing.JFrame {
 
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
         // TODO add your handling code here:
-        Jugar jugar = new Jugar();
-        jugar.setVisible(true);
+
     }//GEN-LAST:event_jLabel1MouseClicked
 
     private void btnJugarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnJugarMouseClicked
         // TODO add your handling code here:
-        Jugar jugar = new Jugar();
-        jugar.setVisible(true);
+        Configuraciones confi = new Configuraciones();
+        confi.setVisible(true);
 
     }//GEN-LAST:event_btnJugarMouseClicked
 
@@ -327,11 +294,9 @@ public class Menu extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel btnComoJugar;
-    private javax.swing.JPanel btnConfiguraciones;
     private javax.swing.JPanel btnJugar;
     private javax.swing.JPanel btnSalir;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;

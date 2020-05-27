@@ -28,25 +28,50 @@ public class Tablero extends javax.swing.JFrame {
         this.panelPlayer3.setVisible(false);
         this.panelPlayer4.setVisible(false);
 
-        if (Global.jugadores.size() == Global.numJugadores) {
+        switch (Global.numJugadores) {
+            case 4:
+                this.panelPlayer1.setVisible(true);
+                this.labelPlayer1.setText(Global.jugadores.get(0).getNombre());
+                this.Avatar1.setIcon(new ImageIcon(this.getClass().getResource("/Imagenes/" + Global.jugadores.get(0).getRutaAvatar())));
+
+                this.panelPlayer2.setVisible(true);
+                this.labelPlayer2.setText(Global.jugadores.get(1).getNombre());
+                this.Avatar2.setIcon(new ImageIcon(this.getClass().getResource("/Imagenes/" + Global.jugadores.get(1).getRutaAvatar())));
+
+                this.panelPlayer3.setVisible(true);
+                this.labelPlayer3.setText(Global.jugadores.get(2).getNombre());
+                this.Avatar3.setIcon(new ImageIcon(this.getClass().getResource("/Imagenes/" + Global.jugadores.get(2).getRutaAvatar())));
+
+                this.panelPlayer4.setVisible(true);
+                this.labelPlayer4.setText(Global.jugadores.get(3).getNombre());
+                this.Avatar4.setIcon(new ImageIcon(this.getClass().getResource("/Imagenes/" + Global.jugadores.get(3).getRutaAvatar())));
+                break;
+            case 3:
+
+                this.panelPlayer1.setVisible(true);
+                this.labelPlayer1.setText(Global.jugadores.get(0).getNombre());
+                this.Avatar1.setIcon(new ImageIcon(this.getClass().getResource("/Imagenes/" + Global.jugadores.get(0).getRutaAvatar())));
+
+                this.panelPlayer2.setVisible(true);
+                this.labelPlayer2.setText(Global.jugadores.get(1).getNombre());
+                this.Avatar2.setIcon(new ImageIcon(this.getClass().getResource("/Imagenes/" + Global.jugadores.get(1).getRutaAvatar())));
+
+                this.panelPlayer3.setVisible(true);
+                this.labelPlayer3.setText(Global.jugadores.get(2).getNombre());
+                this.Avatar3.setIcon(new ImageIcon(this.getClass().getResource("/Imagenes/" + Global.jugadores.get(2).getRutaAvatar())));
+                break;
+            case 2:
+
+                this.panelPlayer1.setVisible(true);
+                this.labelPlayer1.setText(Global.jugadores.get(0).getNombre());
+                this.Avatar1.setIcon(new ImageIcon(this.getClass().getResource("/Imagenes/" + Global.jugadores.get(0).getRutaAvatar())));
+
+                this.panelPlayer2.setVisible(true);
+                this.labelPlayer2.setText(Global.jugadores.get(1).getNombre());
+                this.Avatar2.setIcon(new ImageIcon(this.getClass().getResource("/Imagenes/" + Global.jugadores.get(1).getRutaAvatar())));
+                break;
 
         }
-        this.panelPlayer1.setVisible(true);
-        this.labelPlayer1.setText(Global.jugadores.get(0).getNombre());
-        this.Avatar1.setIcon(new ImageIcon(this.getClass().getResource("/Imagenes/" + Global.jugadores.get(0).getRutaAvatar())));
-
-        this.panelPlayer2.setVisible(true);
-        this.labelPlayer2.setText(Global.jugadores.get(1).getNombre());
-        this.Avatar2.setIcon(new ImageIcon(this.getClass().getResource("/Imagenes/" + Global.jugadores.get(1).getRutaAvatar())));
-
-        this.panelPlayer3.setVisible(true);
-        this.labelPlayer3.setText(Global.jugadores.get(2).getNombre());
-        this.Avatar3.setIcon(new ImageIcon(this.getClass().getResource("/Imagenes/" + Global.jugadores.get(2).getRutaAvatar())));
-
-        this.panelPlayer4.setVisible(true);
-        this.labelPlayer4.setText(Global.jugadores.get(3).getNombre());
-        this.Avatar4.setIcon(new ImageIcon(this.getClass().getResource("/Imagenes/" + Global.jugadores.get(3).getRutaAvatar())));
-
     }
 
     /**
@@ -98,6 +123,8 @@ public class Tablero extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(153, 153, 153));
 
+        panelPlayer1.setBackground(new java.awt.Color(255, 255, 255));
+
         Avatar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/avatar1.PNG"))); // NOI18N
         Avatar1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -132,6 +159,8 @@ public class Tablero extends javax.swing.JFrame {
                 .addContainerGap(34, Short.MAX_VALUE))
         );
 
+        panelPlayer2.setBackground(new java.awt.Color(255, 255, 255));
+
         Avatar2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/avatar2.PNG"))); // NOI18N
         Avatar2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -165,6 +194,8 @@ public class Tablero extends javax.swing.JFrame {
                 .addContainerGap(33, Short.MAX_VALUE))
         );
 
+        panelPlayer3.setBackground(new java.awt.Color(255, 255, 255));
+
         Avatar3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/avatar3.PNG"))); // NOI18N
         Avatar3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -197,6 +228,8 @@ public class Tablero extends javax.swing.JFrame {
                         .addComponent(labelPlayer3)))
                 .addContainerGap(36, Short.MAX_VALUE))
         );
+
+        panelPlayer4.setBackground(new java.awt.Color(255, 255, 255));
 
         Avatar4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/avatar4.PNG"))); // NOI18N
 
