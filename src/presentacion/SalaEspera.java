@@ -112,6 +112,9 @@ public class SalaEspera extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
+        panelPlayer1.setBackground(new java.awt.Color(255, 255, 255));
+        panelPlayer1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
         Avatar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/avatar1.PNG"))); // NOI18N
         Avatar1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -146,6 +149,9 @@ public class SalaEspera extends javax.swing.JFrame {
                 .addContainerGap(34, Short.MAX_VALUE))
         );
 
+        panelPlayer2.setBackground(new java.awt.Color(255, 255, 255));
+        panelPlayer2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
         Avatar2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/avatar2.PNG"))); // NOI18N
         Avatar2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -179,6 +185,9 @@ public class SalaEspera extends javax.swing.JFrame {
                 .addContainerGap(33, Short.MAX_VALUE))
         );
 
+        panelPlayer3.setBackground(new java.awt.Color(255, 255, 255));
+        panelPlayer3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
         Avatar3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/avatar3.PNG"))); // NOI18N
         Avatar3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -211,6 +220,9 @@ public class SalaEspera extends javax.swing.JFrame {
                         .addComponent(labelPlayer3)))
                 .addContainerGap(36, Short.MAX_VALUE))
         );
+
+        panelPlayer4.setBackground(new java.awt.Color(255, 255, 255));
+        panelPlayer4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         Avatar4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/avatar4.PNG"))); // NOI18N
 
@@ -350,7 +362,7 @@ public class SalaEspera extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnRegresar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(188, Short.MAX_VALUE))
+                .addContainerGap(184, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel2);

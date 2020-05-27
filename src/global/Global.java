@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Laptop
+ * @author Alan Acatictla M.
  */
 public class Global {
 

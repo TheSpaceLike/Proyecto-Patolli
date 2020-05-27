@@ -87,15 +87,23 @@ public class Tablero extends javax.swing.JFrame {
         panelPlayer1 = new javax.swing.JPanel();
         Avatar1 = new javax.swing.JLabel();
         labelPlayer1 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        scoreJugador1 = new javax.swing.JLabel();
         panelPlayer2 = new javax.swing.JPanel();
         Avatar2 = new javax.swing.JLabel();
         labelPlayer2 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        scoreJugador2 = new javax.swing.JLabel();
         panelPlayer3 = new javax.swing.JPanel();
         Avatar3 = new javax.swing.JLabel();
         labelPlayer3 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        scoreJugador3 = new javax.swing.JLabel();
         panelPlayer4 = new javax.swing.JPanel();
         Avatar4 = new javax.swing.JLabel();
         labelPlayer4 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        scoreJugador4 = new javax.swing.JLabel();
         btnSalir = new javax.swing.JPanel();
         txtSalir = new javax.swing.JLabel();
         jPanel10 = new javax.swing.JPanel();
@@ -135,6 +143,12 @@ public class Tablero extends javax.swing.JFrame {
         labelPlayer1.setFont(new java.awt.Font("Tahoma", 0, 30)); // NOI18N
         labelPlayer1.setText("Jugador 1");
 
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel1.setText("SCORE");
+
+        scoreJugador1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        scoreJugador1.setText("0");
+
         javax.swing.GroupLayout panelPlayer1Layout = new javax.swing.GroupLayout(panelPlayer1);
         panelPlayer1.setLayout(panelPlayer1Layout);
         panelPlayer1Layout.setHorizontalGroup(
@@ -144,7 +158,14 @@ public class Tablero extends javax.swing.JFrame {
                 .addComponent(Avatar1)
                 .addGap(18, 18, 18)
                 .addComponent(labelPlayer1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
+                .addGroup(panelPlayer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(panelPlayer1Layout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addComponent(scoreJugador1)
+                        .addGap(33, 33, 33)))
+                .addGap(43, 43, 43))
         );
         panelPlayer1Layout.setVerticalGroup(
             panelPlayer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -154,8 +175,12 @@ public class Tablero extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(Avatar1))
                     .addGroup(panelPlayer1Layout.createSequentialGroup()
-                        .addGap(88, 88, 88)
-                        .addComponent(labelPlayer1)))
+                        .addGap(33, 33, 33)
+                        .addComponent(jLabel1)
+                        .addGap(34, 34, 34)
+                        .addGroup(panelPlayer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(scoreJugador1)
+                            .addComponent(labelPlayer1))))
                 .addContainerGap(34, Short.MAX_VALUE))
         );
 
@@ -171,6 +196,12 @@ public class Tablero extends javax.swing.JFrame {
         labelPlayer2.setFont(new java.awt.Font("Tahoma", 0, 30)); // NOI18N
         labelPlayer2.setText("Jugador 2");
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel2.setText("SCORE");
+
+        scoreJugador2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        scoreJugador2.setText("0");
+
         javax.swing.GroupLayout panelPlayer2Layout = new javax.swing.GroupLayout(panelPlayer2);
         panelPlayer2.setLayout(panelPlayer2Layout);
         panelPlayer2Layout.setHorizontalGroup(
@@ -180,7 +211,14 @@ public class Tablero extends javax.swing.JFrame {
                 .addComponent(Avatar2)
                 .addGap(18, 18, 18)
                 .addComponent(labelPlayer2)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(panelPlayer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(panelPlayer2Layout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addComponent(scoreJugador2)
+                        .addGap(33, 33, 33)))
+                .addGap(34, 34, 34))
         );
         panelPlayer2Layout.setVerticalGroup(
             panelPlayer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -189,8 +227,12 @@ public class Tablero extends javax.swing.JFrame {
                 .addGroup(panelPlayer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(Avatar2)
                     .addGroup(panelPlayer2Layout.createSequentialGroup()
-                        .addGap(71, 71, 71)
-                        .addComponent(labelPlayer2)))
+                        .addGap(11, 11, 11)
+                        .addComponent(jLabel2)
+                        .addGap(31, 31, 31)
+                        .addGroup(panelPlayer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(scoreJugador2)
+                            .addComponent(labelPlayer2))))
                 .addContainerGap(33, Short.MAX_VALUE))
         );
 
@@ -206,6 +248,12 @@ public class Tablero extends javax.swing.JFrame {
         labelPlayer3.setFont(new java.awt.Font("Tahoma", 0, 30)); // NOI18N
         labelPlayer3.setText("Jugador 3");
 
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel3.setText("SCORE");
+
+        scoreJugador3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        scoreJugador3.setText("0");
+
         javax.swing.GroupLayout panelPlayer3Layout = new javax.swing.GroupLayout(panelPlayer3);
         panelPlayer3.setLayout(panelPlayer3Layout);
         panelPlayer3Layout.setHorizontalGroup(
@@ -215,17 +263,31 @@ public class Tablero extends javax.swing.JFrame {
                 .addComponent(Avatar3)
                 .addGap(18, 18, 18)
                 .addComponent(labelPlayer3)
-                .addContainerGap(202, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(panelPlayer3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(panelPlayer3Layout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addComponent(scoreJugador3)
+                        .addGap(33, 33, 33)))
+                .addGap(29, 29, 29))
         );
         panelPlayer3Layout.setVerticalGroup(
             panelPlayer3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelPlayer3Layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(panelPlayer3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Avatar3, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(panelPlayer3Layout.createSequentialGroup()
-                        .addGap(69, 69, 69)
-                        .addComponent(labelPlayer3)))
+                        .addContainerGap()
+                        .addGroup(panelPlayer3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Avatar3, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(panelPlayer3Layout.createSequentialGroup()
+                                .addGap(75, 75, 75)
+                                .addGroup(panelPlayer3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(labelPlayer3)
+                                    .addComponent(scoreJugador3)))))
+                    .addGroup(panelPlayer3Layout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addComponent(jLabel3)))
                 .addContainerGap(36, Short.MAX_VALUE))
         );
 
@@ -236,6 +298,12 @@ public class Tablero extends javax.swing.JFrame {
         labelPlayer4.setFont(new java.awt.Font("Tahoma", 0, 30)); // NOI18N
         labelPlayer4.setText("jugador 4");
 
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel4.setText("SCORE");
+
+        scoreJugador4.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        scoreJugador4.setText("0");
+
         javax.swing.GroupLayout panelPlayer4Layout = new javax.swing.GroupLayout(panelPlayer4);
         panelPlayer4.setLayout(panelPlayer4Layout);
         panelPlayer4Layout.setHorizontalGroup(
@@ -245,17 +313,31 @@ public class Tablero extends javax.swing.JFrame {
                 .addComponent(Avatar4)
                 .addGap(18, 18, 18)
                 .addComponent(labelPlayer4)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(panelPlayer4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(panelPlayer4Layout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addComponent(scoreJugador4)
+                        .addGap(33, 33, 33)))
+                .addGap(32, 32, 32))
         );
         panelPlayer4Layout.setVerticalGroup(
             panelPlayer4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelPlayer4Layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(panelPlayer4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Avatar4)
                     .addGroup(panelPlayer4Layout.createSequentialGroup()
-                        .addGap(71, 71, 71)
-                        .addComponent(labelPlayer4)))
+                        .addContainerGap()
+                        .addGroup(panelPlayer4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Avatar4)
+                            .addGroup(panelPlayer4Layout.createSequentialGroup()
+                                .addGap(71, 71, 71)
+                                .addGroup(panelPlayer4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(labelPlayer4)
+                                    .addComponent(scoreJugador4)))))
+                    .addGroup(panelPlayer4Layout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addComponent(jLabel4)))
                 .addContainerGap(27, Short.MAX_VALUE))
         );
 
@@ -664,6 +746,7 @@ public class Tablero extends javax.swing.JFrame {
     private javax.swing.JPanel btnPasar;
     private javax.swing.JPanel btnSalir;
     private javax.swing.JPanel btnTirarDados;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
@@ -671,6 +754,9 @@ public class Tablero extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JLabel labelPlayer1;
@@ -681,6 +767,10 @@ public class Tablero extends javax.swing.JFrame {
     private javax.swing.JPanel panelPlayer2;
     private javax.swing.JPanel panelPlayer3;
     private javax.swing.JPanel panelPlayer4;
+    private javax.swing.JLabel scoreJugador1;
+    private javax.swing.JLabel scoreJugador2;
+    private javax.swing.JLabel scoreJugador3;
+    private javax.swing.JLabel scoreJugador4;
     private javax.swing.JLabel tableroFondo;
     private javax.swing.JLabel txtSalir;
     // End of variables declaration//GEN-END:variables
