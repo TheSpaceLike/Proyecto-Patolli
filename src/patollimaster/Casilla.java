@@ -10,6 +10,7 @@ package patollimaster;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.JPanel;
 
 /**
  * @author Misael Mendoza Gtz misaelmendozagtz@gmail.com
@@ -17,11 +18,12 @@ import java.util.List;
  * @author-mail misaelmendozagtz@gmail.com
  * @date 20/04/2020
  */
-class Casilla {
+public class Casilla {
 
     private List<Ficha> fichas;
     private TipoCasilla tipoCasilla;
     private int posicionActual;
+    private JPanel panel;
 
     /**
      * Construtcor de la clase casilla
@@ -59,6 +61,7 @@ class Casilla {
      */
     public void ponerFicha(Ficha ficha) {
         this.fichas.add(ficha);
+        //this.panel.setBackground(java.awt.Color.red);
     }
     /**
      * Metodo para devolver el array de fichas que tiene esa casilla
@@ -103,6 +106,14 @@ class Casilla {
         this.posicionActual = posicionActual;
     }
 
+    public JPanel getPanel() {
+        return panel;
+    }
+
+    public void setPanel(JPanel panel) {
+        this.panel = panel;
+    }
+    
     enum TipoCasilla{
         SALIDA, 
         APUESTA,

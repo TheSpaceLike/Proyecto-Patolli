@@ -10,6 +10,7 @@ package patollimaster;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.JPanel;
 import patollimaster.Casilla.TipoCasilla;
 
 /**
@@ -18,9 +19,9 @@ import patollimaster.Casilla.TipoCasilla;
  * @author-mail misaelmendozagtz@gmail.com
  * @date 20/04/2020
  */
-public class Tablero {
+public class ControlTablero {
 
-    private static Tablero _instanciaTablero = null;
+    private static ControlTablero _instanciaTablero = null;
     //Array de las casillas comunes a todos los jugadores
     private List<Casilla> casillasBlancas;
     //Array de las casillas del color elegido por el judagor
@@ -29,7 +30,7 @@ public class Tablero {
     private int fichasEnJuego;
 
     //Constructor po defecto que realiza llamadas
-    Tablero() {
+    ControlTablero() {
         crearBlancas();
         fichasEnJuego = 0;
     }
@@ -78,9 +79,9 @@ public class Tablero {
      *
      * @return devuelve el tablero
      */
-    public static Tablero crearInstancia() {
+    public static ControlTablero crearInstancia() {
         if (_instanciaTablero == null) {
-            _instanciaTablero = new Tablero();
+            _instanciaTablero = new ControlTablero();
         }
         return _instanciaTablero;
     }
@@ -91,11 +92,13 @@ public class Tablero {
      */
     public void crearBlancas() {
         casillasBlancas = new ArrayList<Casilla>(60);
-        for (int i = 0; i < 60; i++) {
+        for (int i = 1; i <= 60; i++) {
             Casilla aux;
             if (i == 2 || i == 17 || i == 32 || i == 47) {
-                aux = new Casilla(TipoCasilla.SALIDA, i + 1);
-            } else if (i == 3 || i == 5 || i == 6 || i == 7 || i == 9 || i == 10
+                aux = new Casilla(TipoCasilla.SALIDA, i);
+            } 
+            /*
+            else if (i == 3 || i == 5 || i == 6 || i == 7 || i == 9 || i == 10
                     || i == 11 || i == 13 || i == 18 || i == 20
                     || i == 21 || i == 22 || i == 24 || i == 25 || i == 26
                     || i == 28 || i == 33 || i == 35 || i == 26
@@ -103,20 +106,21 @@ public class Tablero {
                     || i == 48 || i == 50 || i == 51 || i == 52
                     || i == 54 || i == 55 || i == 55 || i == 56 || i == 58) {
                 aux = new Casilla(TipoCasilla.NORMAL, i + 1);
-            } else if (i == 8 || i == 23 || i == 38 || i == 53) {
-                aux = new Casilla(TipoCasilla.COMIBLE, i + 1);
+            }
+            */else if (i == 8 || i == 23 || i == 38 || i == 53) {
+                aux = new Casilla(TipoCasilla.COMIBLE, i);
             } else if (i == 4 || i == 12 || i == 19 || i == 27 || i == 34 || i == 42
                     || i == 49 || i == 57) {
-                aux = new Casilla(TipoCasilla.APUESTA, i + 1);
+                aux = new Casilla(TipoCasilla.APUESTA, i);
             } else if (i == 15 || i == 30 || i == 45 || i == 60) {
-                aux = new Casilla(TipoCasilla.META, i + 1);
+                aux = new Casilla(TipoCasilla.META, i);
             } else if (i == 14 || i == 29 || i == 44 || i == 59) {
-                aux = new Casilla(TipoCasilla.ENTRADA, i + 1);
-            } else if (i == 1 || i == 17 || i == 18 || i == 30 || i == 31 || i == 45 || i == 46
+                aux = new Casilla(TipoCasilla.ENTRADA, i);
+            } else if (i == 1 || i == 15 || i == 16 || i == 30 || i == 31 || i == 45 || i == 46
                     || i == 60) {
-                aux = new Casilla(TipoCasilla.DOBLE, i + 1);
+                aux = new Casilla(TipoCasilla.DOBLE, i);
             } else {
-                aux = new Casilla(TipoCasilla.NORMAL, i + 1);
+                aux = new Casilla(TipoCasilla.NORMAL, i);
             }
             casillasBlancas.add(aux);
         }
@@ -205,4 +209,8 @@ public class Tablero {
             this.fichasEnJuego = fichasEnJuego;
         }*/
         
+        
+        public void setPanelCasilla(int indexCasilla, JPanel panel) {
+            this.casillasBlancas.get(indexCasilla).setPanel(panel);
+        }
 }

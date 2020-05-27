@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 import javafx.scene.control.TableRow;
+import global.Global;
 
 /**
  * @author Misael Mendoza Gtz misaelmendozagtz@gmail.com
@@ -22,7 +23,7 @@ import javafx.scene.control.TableRow;
  */
 public class Patolli {
 
-    private Tablero tablero;
+    private ControlTablero tablero;
     private int nJugadores;
     private Jugador jugadorActual;
     private ArrayList<Jugador> jugadores;
@@ -30,17 +31,18 @@ public class Patolli {
     private Iterador iterador;
     private int resultadoDado;
     private int cantidadDe1;
-    private Vista vista;
+    //private Vista vista;
 
     /**
      * Constructor por defecto de la clase patolli
      */
     public Patolli() {
-        tablero = new Tablero();
+        tablero = new ControlTablero();
         dado = Dado.crearDado();
         this.iterador = new Iterador();
         this.jugadores = new ArrayList();
-        this.vista = new consoleView();
+        this.nJugadores = Global.jugadores.size();
+        //this.vista = new consoleView();
     }
 
     /**
@@ -48,30 +50,50 @@ public class Patolli {
      * color de cada jugador
      */
     public void addJugadores() {
-        vista.welcome();
-        Scanner scan = new Scanner(System.in);
-        nJugadores = vista.askNumeroJugadores();
+        //vista.welcome();
+        //Scanner scan = new Scanner(System.in);
+        //nJugadores = vista.askNumeroJugadores();
         ArrayList<Color> colores = new ArrayList<Color>(Arrays.asList(Color.values()));
         for (int i = 0; i < nJugadores; i++) {
             Jugador jugadorAux = null;
             int j = i + 1;
 
-            int opcion = vista.askColor(j, colores);
+            //int opcion = vista.askColor(j, colores);
             int n = 1;
             for (Color color : colores) {
-                if (n == opcion) {
+                //if (n == opcion) {
+                if (n == i) {
                     jugadorAux = new Jugador(color);
                     colores.remove(color);
                     break;
                 }
                 n++;
             }
+            jugadorAux.JugadorNormal();
+            /*
             opcion = vista.askTipoJugador();
             if (opcion == 1) {
                 jugadorAux.JugadorNormal();
             } else if (opcion == 2) {
                 jugadorAux.JugadorIA();
+            }*/
+            jugadores.add(jugadorAux);
+        }
+        //IA
+        for (int i = this.nJugadores+1; i <= 4; i++) {
+           Jugador jugadorAux = null;
+            //int opcion = vista.askColor(j, colores);
+            int n = 1;
+            for (Color color : colores) {
+                //if (n == opcion) {
+                if (n == i) {
+                    jugadorAux = new Jugador(color);
+                    colores.remove(color);
+                    break;
+                }
+                n++;
             }
+            jugadorAux.JugadorIA();
             jugadores.add(jugadorAux);
         }
     }
@@ -86,10 +108,10 @@ public class Patolli {
         while (!end()) {
             for (Jugador jugador : jugadores) {
                 jugadorActual = jugador;
-                vista.turnoJugador(jugadorActual);
+                //vista.turnoJugador(jugadorActual);
                 if (jugador.tipoJ.toString() == "Normal") {
-                    Scanner sc = new Scanner(System.in);
-                    vista.pressAnyKeyToContinue();
+                    //Scanner sc = new Scanner(System.in);
+                    //vista.pressAnyKeyToContinue();
                     resultadoDado = dado.tirarDado();
 
                     if (resultadoDado == 1 && this.tablero.getFichasEnJuego() <= 1) {
@@ -116,7 +138,6 @@ public class Patolli {
      *
      */
     public boolean end() {
-
         if (this.tablero.getPasillo().get(7).getFichas().size() == 4) {
             System.out.println();
             return true;
