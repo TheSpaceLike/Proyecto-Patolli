@@ -438,6 +438,8 @@ public class SalaEspera extends javax.swing.JFrame {
     private void btnRegresar1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRegresar1MouseClicked
         // TODO add your handling code here:
 
+        Jugar jugar = new Jugar();
+        jugar.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnRegresar1MouseClicked
 

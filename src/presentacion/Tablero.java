@@ -28,6 +28,9 @@ public class Tablero extends javax.swing.JFrame {
         this.panelPlayer3.setVisible(false);
         this.panelPlayer4.setVisible(false);
 
+        if (Global.jugadores.size() == Global.numJugadores) {
+
+        }
         this.panelPlayer1.setVisible(true);
         this.labelPlayer1.setText(Global.jugadores.get(0).getNombre());
         this.Avatar1.setIcon(new ImageIcon(this.getClass().getResource("/Imagenes/" + Global.jugadores.get(0).getRutaAvatar())));
