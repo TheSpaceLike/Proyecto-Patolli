@@ -81,9 +81,7 @@ public class SalaEspera extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(1800, 1200));
         setMinimumSize(new java.awt.Dimension(1800, 1200));
-        setPreferredSize(new java.awt.Dimension(1800, 1200));
         getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(243, 158, 15));
