@@ -9,7 +9,9 @@ import Dominio.Preferencia;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import Dominio.Jugador;
+import com.sun.glass.events.MouseEvent;
 import global.Global;
+import java.util.Scanner;
 
 /**
  *
@@ -17,6 +19,7 @@ import global.Global;
  */
 public class Jugar extends javax.swing.JFrame {
 
+    Scanner tec = new Scanner(System.in);
     private Menu menu;
     private String avatarSeleccionado = null;
 
@@ -31,6 +34,9 @@ public class Jugar extends javax.swing.JFrame {
         this.setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
         this.setResizable(false);
         this.setTitle("Registro");
+
+//        System.out.println("Ingresa el numero de jugadores a la partida");
+//        Global.numJugadores = tec.nextInt();
     }
 
     /**
@@ -349,25 +355,25 @@ public class Jugar extends javax.swing.JFrame {
 
         if (nickname.getText().equalsIgnoreCase("")) {
             mensaje += "Escribe un nickname \r\n";
-        }
-
-        if (!mensaje.equalsIgnoreCase("")) {
-            JOptionPane.showMessageDialog(this, mensaje, "Registro de jugador", JOptionPane.INFORMATION_MESSAGE);
-        } else {
+        } //        if (!mensaje.equalsIgnoreCase("")) {
+        //            JOptionPane.showMessageDialog(this, mensaje, "Registro de jugador", JOptionPane.INFORMATION_MESSAGE);
+        //        }
+        //
+        else {
             Jugador jugador = new Jugador(this.nickname.getText(), this.avatarSeleccionado);
             Preferencia pref = new Preferencia("#FF0000", "#0000FF", "#00FF00");
             jugador.setPreferencia(pref);
             jugador.setColor("#0F0F0");
             //menu.setJugador(jugador);
             //Add player to globals
-            if (Global.jugadores.size() < 4) {
+            if (Global.jugadores.size() < Global.numJugadores) {
                 Global.jugadores.add(jugador);
                 SalaEspera salaespera = new SalaEspera();
                 salaespera.setVisible(true);
                 this.setVisible(false);
                 this.dispose();
             } else {
-                JOptionPane.showMessageDialog(this, "Solo se pueden registrar cuatro jugadores.", "Registro de jugador", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Ya no se pueden registrar más jugadores", "Registro de jugador", JOptionPane.INFORMATION_MESSAGE);
             }
         }
 //
@@ -376,7 +382,15 @@ public class Jugar extends javax.swing.JFrame {
     private void btnRegresarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRegresarMouseClicked
         // TODO add your handling code here:
 
-        this.dispose();
+        if (Global.jugadores.size() == Global.numJugadores) {
+            SalaEspera salaespera = new SalaEspera();
+            salaespera.setVisible(true);
+            this.dispose();
+
+        } else {
+            System.out.println("Entre");
+            this.dispose();
+        }
 
     }//GEN-LAST:event_btnRegresarMouseClicked
 
@@ -393,6 +407,7 @@ public class Jugar extends javax.swing.JFrame {
     private void Avatar1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Avatar1MouseClicked
         // TODO add your handling code here:
         establecerAvatar((ImageIcon) Avatar1.getIcon(), "avatar1.png");
+
     }//GEN-LAST:event_Avatar1MouseClicked
 
     private void Avatar4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Avatar4MouseClicked

@@ -81,9 +81,7 @@ public class SalaEspera extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(1800, 1200));
         setMinimumSize(new java.awt.Dimension(1800, 1200));
-        setPreferredSize(new java.awt.Dimension(1800, 1200));
         getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(243, 158, 15));
@@ -440,6 +438,8 @@ public class SalaEspera extends javax.swing.JFrame {
     private void btnRegresar1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRegresar1MouseClicked
         // TODO add your handling code here:
 
+        Jugar jugar = new Jugar();
+        jugar.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnRegresar1MouseClicked
 
