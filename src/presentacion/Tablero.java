@@ -290,11 +290,9 @@ public class Tablero extends javax.swing.JFrame {
                 .addGap(64, 64, 64)
                 .addGroup(jPlayer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPlayer1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel4)
                         .addGap(31, 31, 31))
                     .addGroup(jPlayer1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel9)
                         .addGap(80, 80, 80))))
             .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -355,11 +353,9 @@ public class Tablero extends javax.swing.JFrame {
                 .addGap(58, 58, 58)
                 .addGroup(jPlayer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPlayer2Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel7)
                         .addGap(28, 28, 28))
                     .addGroup(jPlayer2Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel10)
                         .addGap(76, 76, 76))))
         );
@@ -419,7 +415,7 @@ public class Tablero extends javax.swing.JFrame {
 
         jPlayer4.setBackground(new java.awt.Color(255, 255, 255));
 
-        jPanel7.setBackground(new java.awt.Color(0, 204, 51));
+        jPanel7.setBackground(new java.awt.Color(12, 135, 43));
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -456,11 +452,9 @@ public class Tablero extends javax.swing.JFrame {
                 .addGap(73, 73, 73)
                 .addGroup(jPlayer4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPlayer4Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel8)
                         .addGap(29, 29, 29))
                     .addGroup(jPlayer4Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel11)
                         .addGap(74, 74, 74))))
         );
@@ -519,11 +513,9 @@ public class Tablero extends javax.swing.JFrame {
                 .addGap(62, 62, 62)
                 .addGroup(jPlayer3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPlayer3Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel12)
                         .addGap(26, 26, 26))
                     .addGroup(jPlayer3Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel20)
                         .addGap(74, 74, 74))))
         );

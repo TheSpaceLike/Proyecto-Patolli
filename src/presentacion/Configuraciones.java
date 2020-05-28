@@ -40,7 +40,7 @@ public class Configuraciones extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         tfNumero = new javax.swing.JTextField();
         btnIngresar = new javax.swing.JButton();
-        btnConfigurar = new javax.swing.JPanel();
+        btnRegresar = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -93,7 +93,7 @@ public class Configuraciones extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 646, Short.MAX_VALUE))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(37, 37, 37)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -130,7 +130,9 @@ public class Configuraciones extends javax.swing.JFrame {
             }
         });
 
-        btnIngresar.setFont(new java.awt.Font("Tahoma", 0, 28)); // NOI18N
+        btnIngresar.setBackground(new java.awt.Color(49, 169, 222));
+        btnIngresar.setFont(new java.awt.Font("Tahoma", 0, 32)); // NOI18N
+        btnIngresar.setForeground(new java.awt.Color(255, 255, 255));
         btnIngresar.setText("Ingresar");
         btnIngresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -138,29 +140,29 @@ public class Configuraciones extends javax.swing.JFrame {
             }
         });
 
-        btnConfigurar.setBackground(new java.awt.Color(49, 169, 222));
-        btnConfigurar.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnRegresar.setBackground(new java.awt.Color(167, 13, 13));
+        btnRegresar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnConfigurarMouseClicked(evt);
+                btnRegresarMouseClicked(evt);
             }
         });
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 28)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 32)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("CONFIGURAR");
+        jLabel4.setText("SALIR");
 
-        javax.swing.GroupLayout btnConfigurarLayout = new javax.swing.GroupLayout(btnConfigurar);
-        btnConfigurar.setLayout(btnConfigurarLayout);
-        btnConfigurarLayout.setHorizontalGroup(
-            btnConfigurarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnConfigurarLayout.createSequentialGroup()
+        javax.swing.GroupLayout btnRegresarLayout = new javax.swing.GroupLayout(btnRegresar);
+        btnRegresar.setLayout(btnRegresarLayout);
+        btnRegresarLayout.setHorizontalGroup(
+            btnRegresarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnRegresarLayout.createSequentialGroup()
                 .addContainerGap(126, Short.MAX_VALUE)
                 .addComponent(jLabel4)
                 .addGap(115, 115, 115))
         );
-        btnConfigurarLayout.setVerticalGroup(
-            btnConfigurarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(btnConfigurarLayout.createSequentialGroup()
+        btnRegresarLayout.setVerticalGroup(
+            btnRegresarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnRegresarLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 57, Short.MAX_VALUE)
                 .addContainerGap())
@@ -179,9 +181,9 @@ public class Configuraciones extends javax.swing.JFrame {
                     .addComponent(btnIngresar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(413, Short.MAX_VALUE)
-                .addComponent(btnConfigurar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(377, 377, 377))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnRegresar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(428, 428, 428))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -193,9 +195,9 @@ public class Configuraciones extends javax.swing.JFrame {
                 .addComponent(tfNumero, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnIngresar, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 107, Short.MAX_VALUE)
-                .addComponent(btnConfigurar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(85, 85, 85))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 119, Short.MAX_VALUE)
+                .addComponent(btnRegresar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(73, 73, 73))
         );
 
         getContentPane().add(jPanel1);
@@ -232,18 +234,28 @@ public class Configuraciones extends javax.swing.JFrame {
         if (nJugadores >= 2 && nJugadores <= 4) {
 
             global.Global.numJugadores = nJugadores;
-            JOptionPane.showMessageDialog(this, "Ingresaste " + nJugadores + " jugadores");
+            JOptionPane.showMessageDialog(this, "Sean registrado: " + nJugadores + " jugadores");
         } else {
             JOptionPane.showMessageDialog(this, "Solo puedes ingresar 2 a 4 jugadores");
         }
 
+        if (tfNumero.getText() != null) {
+            Jugar jugar = new Jugar();
+            jugar.setVisible(true);
+            this.setVisible(false);
+        }
+
     }//GEN-LAST:event_btnIngresarActionPerformed
 
-    private void btnConfigurarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnConfigurarMouseClicked
+    private void btnRegresarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRegresarMouseClicked
         // TODO add your handling code here:
-        Jugar jugar = new Jugar();
-        jugar.setVisible(true);
-    }//GEN-LAST:event_btnConfigurarMouseClicked
+        int confirm = JOptionPane.showConfirmDialog(this, "¿Seguro que quiere cerrar el juego?", "Confirmación", JOptionPane.YES_NO_OPTION);
+
+        if (confirm == JOptionPane.YES_OPTION) {
+            System.exit(0);
+        }
+
+    }//GEN-LAST:event_btnRegresarMouseClicked
 
     /**
      * @param args the command line arguments
@@ -281,8 +293,8 @@ public class Configuraciones extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel btnConfigurar;
     private javax.swing.JButton btnIngresar;
+    private javax.swing.JPanel btnRegresar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

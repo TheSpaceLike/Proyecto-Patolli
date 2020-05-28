@@ -303,7 +303,7 @@ public class SalaEspera extends javax.swing.JFrame {
 
         txtVotar.setFont(new java.awt.Font("Tahoma", 0, 30)); // NOI18N
         txtVotar.setForeground(new java.awt.Color(255, 255, 255));
-        txtVotar.setText("VOTAR");
+        txtVotar.setText("JUGAR");
 
         javax.swing.GroupLayout btnVotarLayout = new javax.swing.GroupLayout(btnVotar);
         btnVotar.setLayout(btnVotarLayout);
