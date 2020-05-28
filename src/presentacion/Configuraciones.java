@@ -210,6 +210,10 @@ public class Configuraciones extends javax.swing.JFrame {
 
     private void tfNumeroKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfNumeroKeyTyped
         // TODO add your handling code here:
+        if (tfNumero.getText().length() >= 1) {
+            evt.consume();
+        }
+
         char validar = evt.getKeyChar();
 
         if (Character.isLetter(validar)) {
