@@ -5,14 +5,29 @@
  */
 package patollimaster;
 
+import global.Global;
+
 /**
  *
  * @author a-roc
  */
 public class PuntajeJugador {
 
-    public PuntajeJugador(PuntajeJugador puntaje) {
+     public int score;
+     
 
+    public PuntajeJugador(int score) {
+        this.score = score;
     }
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+    }
+     
+
 
 }

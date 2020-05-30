@@ -8,6 +8,7 @@
  * */
 package patollimaster;
 
+import Dominio.Color;
 import java.util.ArrayList;
 import patollimaster.Casilla.TipoCasilla;
 
@@ -64,13 +65,14 @@ public class Iterador {
     public Casilla siguienteCasilla() {
         Casilla aux = null;
         int indicePasillo = this.indice - this.tablero.getCasillasBlancas().size() + 1;
-        int sizeAll = this.tablero.getCasillasBlancas().size() + this.tablero.getPasillo().size();
-
+        //int sizeAll = this.tablero.getCasillasBlancas().size() + this.tablero.getPasillo().size();
+        /*
         if (this.indice < this.tablero.getCasillasBlancas().size()) {
             aux = this.tablero.getCasillasBlancas().get(this.indice);
         } else if (this.indice >= this.tablero.getCasillasBlancas().size() && this.indice < sizeAll) {
-            aux = this.tablero.getPasillo().get(indicePasillo);
+            //aux = this.tablero.getPasillo().get(indicePasillo);
         }
+        */
         this.indice++;
         return aux;
     }

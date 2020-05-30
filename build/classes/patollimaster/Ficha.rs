@@ -1,2 +1,0 @@
-patollimaster.Color
-patollimaster.Ficha

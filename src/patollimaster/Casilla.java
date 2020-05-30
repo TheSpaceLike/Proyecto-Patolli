@@ -8,9 +8,12 @@
  * */
 package patollimaster;
 
+import Dominio.Ficha;
+import Dominio.Color;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JPanel;
+import java.util.ArrayList;
 
 /**
  * @author Misael Mendoza Gtz misaelmendozagtz@gmail.com
@@ -19,7 +22,7 @@ import javax.swing.JPanel;
  * @date 20/04/2020
  */
 public class Casilla {
-
+    //Variables
     private List<Ficha> fichas;
     private TipoCasilla tipoCasilla;
     private int posicionActual;
@@ -36,11 +39,14 @@ public class Casilla {
     public Casilla(TipoCasilla tipo1, int posicion) {
         this.tipoCasilla = tipo1;
         this.posicionActual = posicion;
+        /*
         if (tipo1.equals(TipoCasilla.META)) {
             this.fichas = new ArrayList<Ficha>(4);
         } else {
             this.fichas = new ArrayList<Ficha>(2);
         }
+        */
+        this.fichas = new ArrayList<Ficha>();
     }// Cierre del constructor
 
     /**
@@ -59,9 +65,36 @@ public class Casilla {
      * @param ficha El parametro ficha de tipo Ficha indica la ficha que hay que
      * añadir
      */
-    public void ponerFicha(Ficha ficha) {
-        this.fichas.add(ficha);
-        //this.panel.setBackground(java.awt.Color.red);
+    public boolean ponerFicha(Ficha ficha) {
+        if (this.fichas.size() > 0) {
+            if (this.fichas.get(0).getColor() != ficha.getColor()) {
+                if (this.tipoCasilla == TipoCasilla.COMIBLE) {
+                    if (this.fichas.size() > 0) {
+                        this.fichas = new ArrayList<Ficha>();
+                        this.fichas.add(ficha);
+                    }
+                } else {
+                    return false;
+                }
+            } else {
+                this.fichas.add(ficha);
+            }
+        } else {
+            this.fichas.add(ficha);
+        }
+        
+        this.panel.setBackground(this.getColorFicha(ficha.getColor()));
+        return true;
+    }
+    
+    private java.awt.Color getColorFicha(Color color) {
+        switch(color) {
+            case ROJO:  return java.awt.Color.RED;
+            case AZUL:  return java.awt.Color.BLUE;
+            case AMARILLO:  return java.awt.Color.YELLOW;
+            case VERDE:  return java.awt.Color.GREEN;
+            default:    return java.awt.Color.BLACK;
+        }
     }
     /**
      * Metodo para devolver el array de fichas que tiene esa casilla

@@ -9,6 +9,9 @@
 
 package patollimaster;
 
+import Dominio.Ficha;
+import Dominio.Color;
+
 /**
  * @author Misael Mendoza Gtz     misaelmendozagtz@gmail.com
  * @version 1.0
@@ -18,10 +21,10 @@ package patollimaster;
 public class FabricaFichasAmarilla implements FabricaAbstractaFichas{
 
     @Override
-    public Ficha crearFicha() {
-    Color c1 = Color.AMARILLO;
-    Ficha f1 = new Ficha(c1);
-    return f1;
+    public Ficha crearFicha(int userId) {
+        Color c1 = Color.AMARILLO;
+        Ficha f1 = new Ficha(userId, c1);
+        return f1;
     }
 
 }

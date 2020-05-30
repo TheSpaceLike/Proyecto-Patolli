@@ -7,9 +7,12 @@
  *  o mejoras enviar un email a misaelmendozagtz@gmail.com
 **/
 
-package patollimaster;
+package Dominio;
 
 import java.util.ArrayList;
+import java.util.List;
+import patollimaster.Casilla;
+import patollimaster.PuntajeJugador;
 
 /**
  * @author Misael Mendoza Gtz     misaelmendozagtz@gmail.com
@@ -17,37 +20,26 @@ import java.util.ArrayList;
  * @author-mail misaelmendozagtz@gmail.com
  * @date 6/05/2020
  */
-public class Jugador {
+public class Juego {
     public Color color;
-    public Iterador iterador;
     public int fichasEnJuego;
-    public ITipoJugador tipoJugador;
-    public tipo tipoJ;
+    public PuntajeJugador score;
+    private int initPosition;
+    private List<Ficha> fichas;
     
     /**
      * Constructor de clase jugador
      * @param c1 indica el color del jugador
      */
-    public Jugador (Color c1){
+    public Juego(Color c1, int initPosition){
         this.color =c1;
-        this.iterador = new Iterador();
-    }
-    
-    public void JugadorNormal(){
-        tipoJ = tipo.Normal;
-        ITipoJugador jugadorNormal = new JugadorNormal();
-        setTipoJugador(jugadorNormal);
-    }
-    
-    public void JugadorIA(){
-        tipoJ = tipo.IA;
-        ITipoJugador jugadorIA = new JugadorIA();
-        setTipoJugador(jugadorIA);
+        this.initPosition = initPosition;
+        this.fichas = new ArrayList<Ficha>();
     }
     
     public void Mover(){
-        String descripcion = this.tipoJugador.ObtenerDescripcion();
-        System.out.println("Tipo de jugador que se mueve " + descripcion);
+        //String descripcion = this.tipoJugador.ObtenerDescripcion();
+        //System.out.println("Tipo de jugador que se mueve " + descripcion);
     }
     
     /**
@@ -61,27 +53,10 @@ public class Jugador {
     /**
      * Metodo que devuelve las casillas que contienen fichas del color del jugador
      * @return  las casillas con fichas de un color
-     */
+     *
     public ArrayList<Casilla> getCasillasConFichas(){
       return this.iterador.recorrer(this.color);
-    }
-    
-    /**
-     * Metodo que imprime por consola la posicion de lass fichas de un jugador
-     */
-    public void imprimirLocalizacionFichasJugador(){
-        ArrayList<Casilla> listaFichasJugador = getCasillasConFichas();
-        this.fichasEnJuego = listaFichasJugador.size();
-        Vista.mostrarFichasEnJuego(listaFichasJugador, fichasEnJuego);
-    }
-    
-    /**
-     * Metodo que pregunta al jugador que ficha quiere mover y devuelve la eleccion
-     * @return devuelve la ficha elegida por el jugador
-     */
-    public int eleccion(){
-        return this.tipoJugador.eleccion(this.color, this.fichasEnJuego);
-    }
+    }*/
     
     /**
      * Metodo que obtiene las fichas en juego
@@ -98,17 +73,20 @@ public class Jugador {
     public void setFichasEnJuego(int fichasEnJuego) {
         this.fichasEnJuego = fichasEnJuego;
     }
-
-    public ITipoJugador getTipoJugador() {
-        return tipoJugador;
+    
+    public int getInitPosition() {
+        return initPosition;
     }
 
-    public void setTipoJugador(ITipoJugador tipoJugador) {
-        this.tipoJugador = tipoJugador;
+    public void setInitPosition(int initPosition) {
+        this.initPosition = initPosition;
     }
     
-    enum tipo{
-        Normal,
-        IA
+    public List<Ficha> getFichas() {
+        return fichas;
+    }
+
+    public void setFichas(List<Ficha> fichas) {
+        this.fichas = fichas;
     }
 }

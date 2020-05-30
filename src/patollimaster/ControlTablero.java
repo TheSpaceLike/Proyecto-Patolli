@@ -1,14 +1,12 @@
-/**
- *  Tablero.java
- *  Creada el 20/04/2020, 02:04:16 PM
- *  Clase Java desarrollada por Misael Mendoza Gtz     misaelmendozagtz@gmail.com como ejercicio educativo del programa
- *  ISW del Instituto Tecnológico de Sonora Unidad Nainarí
- *  Para información sobre el uso de esta clase, así como bugs, actualizaciones
- *  o mejoras enviar un email a misaelmendozagtz@gmail.com
- * */
+
 package patollimaster;
 
+import Dominio.Ficha;
+import Dominio.Color;
+import Dominio.Juego;
+import Dominio.Jugador;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import javax.swing.JPanel;
 import patollimaster.Casilla.TipoCasilla;
@@ -24,16 +22,23 @@ public class ControlTablero {
     private static ControlTablero _instanciaTablero = null;
     //Array de las casillas comunes a todos los jugadores
     private List<Casilla> casillasBlancas;
-    //Array de las casillas del color elegido por el judagor
-    private List<Casilla> pasillo;
-    //Numero de fichas que el jugador tiene en juego
-    private int fichasEnJuego;
+    //Jugadores
+    public ArrayList<Jugador> jugadores;
+    //Init positions
+    private int[] initPositions = {2, 17, 32, 47};
+    //Turno
+    private int turno = 0;
 
     //Constructor po defecto que realiza llamadas
     ControlTablero() {
         crearBlancas();
-        fichasEnJuego = 0;
+        //Set jugadores
+        this.jugadores = global.Global.jugadores;
+        //Set games
+        this.addGames();
     }
+    
+    
 
     //Setters and Getters
     /**
@@ -55,24 +60,6 @@ public class ControlTablero {
     }
 
     /**
-     * Metodo que devuelve el array de las celdas de tipo padillo
-     *
-     * @return devuelve celdas de tipo pasillo
-     */
-    public List<Casilla> getPasillo() {
-        return pasillo;
-    }
-
-    /**
-     * Metodo que crea el array de tipo pasillo
-     *
-     * @param pasillo define el array de casillas de tipo pasillo
-     */
-    public void setPasillo(List<Casilla> pasillo) {
-        this.pasillo = pasillo;
-    }
-
-    /**
      * Metodo estatico que implementa el patron Singleton haciendo posible la
      * creacion de una instancia de la clase Tablero unicamente si no hay una
      * instancia ya creada
@@ -86,6 +73,30 @@ public class ControlTablero {
         return _instanciaTablero;
     }
 
+    /**
+     * Metodo para aniadir jugadores a la partida El metodo pide por consola el
+     * color de cada jugador
+     */
+    public void addGames() {
+        ArrayList<Color> colores = new ArrayList<Color>(Arrays.asList(Color.values()));
+        for (int i = 0; i < this.jugadores.size(); i++) {
+
+            //int opcion = vista.askColor(j, colores);
+            int n = 0;
+            for (Color color : colores) {
+                //if (n == opcion) {
+                if (n == i) {
+                    this.jugadores.get(i).setJuego(new Juego(color, this.initPositions[i]));
+                    this.jugadores.get(i).getJuego().getFichas().add(new Ficha(this.jugadores.get(i).getId(), color));
+                    colores.remove(color);
+                    break;
+                }
+                n++;
+            }
+        }
+       
+    }
+    
     /**
      * Inicia el array de las casillas comunes y cambia su tipo y fincion del
      * numero que sea
@@ -125,92 +136,98 @@ public class ControlTablero {
             casillasBlancas.add(aux);
         }
     }
-/**
- * A;ade una ficha nueva al jugador haciendo uso del patro Facctory usando 
- * diferentes fabricas en funcion del color de la ficha a crear
- */
-    public void addFichaAlJuego(Color color){
+    
+    /**
+     * A;ade una ficha nueva al jugador haciendo uso del patro Facctory usando 
+     * diferentes fabricas en funcion del color de la ficha a crear
+     */
+    public void addFichaAlJuego(Jugador jugador, Color color){
         FabricaAbstractaFichas fabrica;
         Ficha ficha;
         
         switch(color){
             case ROJO:
                 fabrica = new FabricaFichasRojo();
-                ficha = fabrica.crearFicha();
-                this.casillasBlancas.get(2).ponerFicha(ficha);
+                ficha = fabrica.crearFicha(jugador.getId());
+                jugador.getJuego().getFichas().add(ficha);
+                this.casillasBlancas.get(jugador.getJuego().getInitPosition()-1).ponerFicha(ficha);
                 break;
             case AMARILLO:
                 fabrica = new FabricaFichasAmarilla();
-                ficha = fabrica.crearFicha();
-                this.casillasBlancas.get(19).ponerFicha(ficha);
+                ficha = fabrica.crearFicha(jugador.getId());
+                jugador.getJuego().getFichas().add(ficha);
+                this.casillasBlancas.get(jugador.getJuego().getInitPosition()-1).ponerFicha(ficha);
                 break;
             case VERDE:
                 fabrica = new FabricaFichasVerde();
-                ficha = fabrica.crearFicha();
-                this.casillasBlancas.get(32).ponerFicha(ficha);
+                ficha = fabrica.crearFicha(jugador.getId());
+                jugador.getJuego().getFichas().add(ficha);
+                this.casillasBlancas.get(jugador.getJuego().getInitPosition()-1).ponerFicha(ficha);
                 break;
             case AZUL:
                 fabrica = new FabricaFichasAzul();
-                ficha = fabrica.crearFicha();
-                this.casillasBlancas.get(47).ponerFicha(ficha);
+                ficha = fabrica.crearFicha(jugador.getId());
+                jugador.getJuego().getFichas().add(ficha);
+                this.casillasBlancas.get(jugador.getJuego().getInitPosition()-1).ponerFicha(ficha);
                 break;
             default:
                 break;
         }
-        this.fichasEnJuego++;
     }
+    
+    public void nextTurn() {
+        if (this.turno == (this.jugadores.size()-1)) {
+            this.turno = 0;
+        } else {
+            this.turno++;
+        }
+    }
+    
+    
     /**
      * Metodo utilizado para mover las fichas
      */
     //posicion por casilla en la que esta la ficha
     // cambiar constructor con posicion y next devuelve y luego incremento
 
-    public void moverFicha(Ficha ficha, Casilla casillaActual, int nDado){
-        Iterador iterator = new Iterador (casillaActual.getPosicionActual(), casillaActual.getTipoCasilla());
-        Casilla casillaDestino = null;
-    while(iterator.hayMas()&& nDado >= 0){
-        casillaDestino =  iterator.siguienteCasilla();
-        nDado--;
+    public boolean moverFicha(Ficha ficha, Casilla casillaActual, int nDado){
+        int indexNextBox = (casillaActual.getPosicionActual()-1) + nDado;        
+        Casilla casillaDestino = this.casillasBlancas.get(indexNextBox);
+        boolean complete = casillaDestino.ponerFicha(ficha);
+                
+        return complete;
     }
-    casillaDestino.ponerFicha(ficha);
-    casillaActual.borrarFicha(ficha);
+	
+    /**
+    * Metodo utilizado para borrar las fichas. REVISAR
+    */	
+    /*public void borrarFicha(int posicion) {
+            this.casillasBlancas.get(posicion-1).borrarFicha(this.casillasBlancas.get(posicion-1).getFichas().get(0));
+    }*/
+
+    public void cleanBox(int position, Ficha ficha) {
+        this.casillasBlancas.get(position).getPanel().setBackground(java.awt.Color.gray);
+        this.casillasBlancas.get(position).borrarFicha(ficha);
     }
-    /*public void moverFicha(Casilla casilla, int nDado){
-		Ficha ficha = casilla.getFichas().get(0);
-		Iterador iterator = new Iterador(casilla.getPosicionActual(), casilla.getTipoCasilla());
-		/*this.casillasBlancas.get(posicion-1+nDado).ponerFicha(ficha);
-		this.casillasBlancas.get(posicion-1).borrarFicha(ficha);*/
-		
-	//}*/
-	
-	/**
-	* Metodo utilizado para borrar las fichas. REVISAR
-	*/	
-	/*public void borrarFicha(int posicion) {
-		this.casillasBlancas.get(posicion-1).borrarFicha(this.casillasBlancas.get(posicion-1).getFichas().get(0));
-	}*/
-	
-	public void borrarFicha() {
-		this.fichasEnJuego--;
-	}
-        
-        /**
-         * Metodo utilizado para obtener las fichas
-         * @return las fichas que hay en juego
-         */
-        public int getFichasEnJuego(){
-            return fichasEnJuego;
-        }
-        /**
-         * Metoddo utilizado para modificar el numero de fichas en juego
-         * @param fichasEnJuego indica el numero de fichas que hay en juego
-         */
-        /*public void SetFichasEnJuego(int fichasEnJuego){
-            this.fichasEnJuego = fichasEnJuego;
-        }*/
+    
+    /**
+     * Metoddo utilizado para modificar el numero de fichas en juego
+     * @param fichasEnJuego indica el numero de fichas que hay en juego
+     */
+    /*public void SetFichasEnJuego(int fichasEnJuego){
+        this.fichasEnJuego = fichasEnJuego;
+    }*/
         
         
-        public void setPanelCasilla(int indexCasilla, JPanel panel) {
-            this.casillasBlancas.get(indexCasilla).setPanel(panel);
-        }
+    public void setPanelCasilla(int indexCasilla, JPanel panel) {
+        this.casillasBlancas.get(indexCasilla).setPanel(panel);
+    }
+
+    public int getTurno() {
+    return turno;
+    }
+
+    public void setTurno(int turno) {
+        this.turno = turno;
+    }
 }

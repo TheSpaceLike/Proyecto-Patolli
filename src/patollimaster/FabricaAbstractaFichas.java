@@ -9,6 +9,8 @@
 
 package patollimaster;
 
+import Dominio.Ficha;
+
 /**
  * @author Misael Mendoza Gtz     misaelmendozagtz@gmail.com
  * @version 1.0
@@ -16,5 +18,5 @@ package patollimaster;
  * @date 5/05/2020
  */
 public interface FabricaAbstractaFichas {
-    public Ficha crearFicha();
+    public Ficha crearFicha(int userId);
 }

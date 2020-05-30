@@ -7,29 +7,34 @@
  *  o mejoras enviar un email a misaelmendozagtz@gmail.com
 **/
 
-package patollimaster;
+package Dominio;
 
-/**
- * @author Misael Mendoza Gtz     misaelmendozagtz@gmail.com
- * @version 1.0
- * @author-mail misaelmendozagtz@gmail.com
- * @date 20/04/2020
- */
-class Ficha {
+
+public class Ficha {
     private Color color;
+    private int userId;
+    private int avance = 0;
      
-    public Ficha(Color c1){
+    public Ficha(int userId, Color c1){
         this.color = c1;
+        this.userId = userId;
     }
 
     public Color getColor() {
         return color;
     }
+    
+    public int getAvance() {
+        return avance;
+    }
+
+    public void setAvance(int avance) {
+        this.avance = avance;
+    }
+    
+    public void addAvance(int avance) {
+        this.avance += avance;
+    }
+    
 }
-  enum Color{
-      AMARILLO,
-      ROJO,
-      VERDE,
-      AZUL,
-  }
     

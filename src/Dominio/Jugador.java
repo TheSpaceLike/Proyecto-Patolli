@@ -5,6 +5,8 @@
  */
 package Dominio;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -12,18 +14,21 @@ import java.util.Objects;
  * @author Alan Acatictla M.
  */
 public class Jugador {
+    private int id;
     private String nombre;
     private String rutaAvatar;
     private int puntaje;
     private Preferencia preferencia;
     private String color;
+    private Juego juego;
 
-    public Jugador(String nombre, String rutaAvatar) {
+
+    public Jugador(int id, String nombre, String rutaAvatar) {
         this.nombre = nombre;
         this.rutaAvatar = rutaAvatar;
     }
 
-    public Jugador(String nombre, String rutaAvatar, int puntaje) {
+    public Jugador(int id, String nombre, String rutaAvatar, int puntaje) {
         this.nombre = nombre;
         this.rutaAvatar = rutaAvatar;
         this.puntaje = puntaje;
@@ -68,6 +73,14 @@ public class Jugador {
     public void setColor(String color) {
         this.color = color;
     }
+    
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     @Override
     public int hashCode() {
@@ -92,6 +105,14 @@ public class Jugador {
             return false;
         }
         return true;
+    }
+    
+    public Juego getJuego() {
+        return juego;
+    }
+
+    public void setJuego(Juego juego) {
+        this.juego = juego;
     }
     
     @Override

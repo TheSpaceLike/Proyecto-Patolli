@@ -9,6 +9,9 @@
 
 package patollimaster;
 
+import Dominio.Ficha;
+import Dominio.Color;
+
 /**
  * @author Misael Mendoza Gtz     misaelmendozagtz@gmail.com
  * @version 1.0
@@ -18,9 +21,9 @@ package patollimaster;
 public class FabricaFichasAzul implements FabricaAbstractaFichas{
 
     @Override
-    public Ficha crearFicha() {
+    public Ficha crearFicha(int userId) {
         Color c1 = Color.AZUL;
-        Ficha f1 = new Ficha(c1);
+        Ficha f1 = new Ficha(userId, c1);
         return f1;
     }
 
